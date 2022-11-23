@@ -27,13 +27,20 @@ body {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2em;
+  margin: 0;
 }
 
 main {
   text-align: center;
   margin: 0 auto;
   max-width: 400px;
+}
+
+.c-logo {
+  max-width: 100%;
+  vertical-align: bottom;
+  margin: 0.5em 0 0.5em;
 }
 
 .c-face {

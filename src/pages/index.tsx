@@ -1,15 +1,17 @@
 import * as React from "react";
 import type { HeadFC } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 
 import "../styles/base.scss";
+
+import logo from "../assets/images/wizzy-logo.png";
+import daniface from "../assets/images/daniface.png";
+import yenface from "../assets/images/yenface.png";
 
 const IndexPage: React.FC = () => (
   <main>
     <h1>
       welcome to the
-      <br />
-      Witch 💖 Zone!
+      <img src={logo} className="c-logo" />
     </h1>
 
     <p>
@@ -18,18 +20,8 @@ const IndexPage: React.FC = () => (
       things for everyone to enjoy!
     </p>
 
-    <StaticImage
-      placeholder="none"
-      src="../assets/images/daniface.png"
-      className="c-face c-face--dani"
-      alt=""
-    />
-    <StaticImage
-      placeholder="none"
-      src="../assets/images/yenface.png"
-      className="c-face c-face--yen"
-      alt=""
-    />
+    <img src={daniface} className="c-face c-face--dani" alt="" />
+    <img src={yenface} className="c-face c-face--yen" alt="" />
   </main>
 );
 
