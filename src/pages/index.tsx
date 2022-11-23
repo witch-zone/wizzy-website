@@ -1,25 +1,37 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import type { HeadFC } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
+import "../styles/base.scss";
 
-const IndexPage: React.FC<PageProps> = () => {
-  return (
-    <main style={pageStyles}>
-      <h1>welcome to the Witch 💖 Zone</h1>
+const IndexPage: React.FC = () => (
+  <main>
+    <h1>
+      welcome to the
+      <br />
+      Witch 💖 Zone!
+    </h1>
 
-      <p>
-        the witch zone is yen quach, dani quinn sexton, and sometimes their
-        friends. we want to try to make cute, silly, and (most importantly)
-        inclusive things for everyone to enjoy!
-      </p>
-    </main>
-  );
-};
+    <p>
+      the witch zone is yen quach, dani quinn sexton, and sometimes their
+      friends. we want to make cute, silly, and (most importantly) inclusive
+      things for everyone to enjoy!
+    </p>
+
+    <StaticImage
+      placeholder="none"
+      src="../assets/images/daniface.png"
+      className="c-face c-face--dani"
+      alt=""
+    />
+    <StaticImage
+      placeholder="none"
+      src="../assets/images/yenface.png"
+      className="c-face c-face--yen"
+      alt=""
+    />
+  </main>
+);
 
 export default IndexPage;
 
