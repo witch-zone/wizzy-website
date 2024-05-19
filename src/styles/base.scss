@@ -1,3 +1,5 @@
+@use "colours" as colours;
+
 @font-face {
   font-family: "Noyh R";
   src: url("../assets/fonts/noyhr-bold.woff") format("woff");
@@ -13,46 +15,15 @@
 }
 
 body {
-  background: #613f65;
-  color: #fff;
+  background: colours.$white;
+  color: colours.$purple;
   font-family: "Noyh R", sans-serif;
   font-size: 18px;
   padding: 0;
   margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: stretch;
 }
 
 h1 {
   font-size: 2em;
   margin: 0;
-}
-
-main {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 400px;
-}
-
-.c-logo {
-  max-width: 100%;
-  vertical-align: bottom;
-  margin: 0.5em 0 0.5em;
-}
-
-.c-face {
-  position: fixed;
-  height: auto;
-  width: 15em;
-  max-width: 25vw;
-  bottom: 0;
-  left: 0;
-
-  &--yen {
-    right: 0;
-    left: auto;
-  }
 }

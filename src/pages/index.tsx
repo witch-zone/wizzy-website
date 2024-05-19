@@ -1,30 +1,42 @@
 import * as React from "react";
 import type { HeadFC } from "gatsby";
+import classnames from "classnames";
 
 import "../styles/base.scss";
+import * as classes from "./index.module.scss";
 
-import logo from "../assets/images/wizzy-logo.png";
+import Logo from "../assets/images/wizzy-logo.svg";
 import daniface from "../assets/images/daniface.png";
 import yenface from "../assets/images/yenface.png";
 
-const IndexPage: React.FC = () => (
+export default () => (
   <main>
-    <h1>
-      welcome to the
-      <img src={logo} className="c-logo" />
-    </h1>
+    <section className={classes.WizzyWelcome}>
+      <div className={classes.WizzyWelcome__Message}>
+        <h1>
+          welcome to the
+          <Logo className={classes.WizzyWelcome__Logo} alt="Witch💖Zone" />
+        </h1>
 
-    <p>
-      the witch zone is yen quach, dani quinn sexton, and sometimes their
-      friends. we want to make cute, silly, and (most importantly) inclusive
-      things for everyone to enjoy!
-    </p>
+        <p>
+          the witch zone is yen quach, dani valentine, and sometimes their
+          friends. we want to make cute, silly, and inclusive things for
+          everyone to enjoy!
+        </p>
+      </div>
 
-    <img src={daniface} className="c-face c-face--dani" alt="" />
-    <img src={yenface} className="c-face c-face--yen" alt="" />
+      <img
+        src={daniface}
+        className={classnames(classes.Witch, classes.Witch__Dani)}
+        alt=""
+      />
+      <img
+        src={yenface}
+        className={classnames(classes.Witch, classes.Witch__Yen)}
+        alt=""
+      />
+    </section>
   </main>
 );
 
-export default IndexPage;
-
-export const Head: HeadFC = () => <title>the Witch 💖 Zone</title>;
+export const Head: HeadFC = () => <title>welcome to the Witch💖Zone!</title>;

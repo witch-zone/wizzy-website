@@ -1,0 +1,40 @@
+@use "../styles/colours" as colours;
+
+.WizzyWelcome {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background: colours.$purple;
+  color: colours.$white;
+
+  &__Message {
+    max-width: 20em;
+    text-align: center;
+  }
+
+  &__Logo {
+    display: block;
+    max-width: 100%;
+    fill: currentColor;
+    margin: 0.5em 0 0.5em;
+  }
+}
+
+.Witch {
+  position: absolute;
+  height: auto;
+  width: 15em;
+  max-width: 25vw;
+  bottom: 0;
+
+  &__Dani {
+    left: 0;
+  }
+
+  &__Yen {
+    right: 0;
+  }
+}

@@ -1,0 +1,18 @@
+@use "../styles/colours" as colours;
+
+.Wizzy {
+  min-height: 100vh;
+}
+
+.WizzyHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+  &__Logo {
+    max-width: 5em;
+    fill: currentColor;
+  }
+}

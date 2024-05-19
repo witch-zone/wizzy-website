@@ -10,13 +10,20 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/assets/images/wizzy-badge.png",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.svg$/,
+        },
       },
     },
     "gatsby-transformer-remark",
