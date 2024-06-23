@@ -9,10 +9,25 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  margin: 2rem;
+
+  &__Home {
+    color: colours.$purple;
+    flex-grow: 1;
+    max-width: 5em;
+
+    &:hover {
+      color: pink;
+    }
+  }
 
   &__Logo {
-    max-width: 5em;
     fill: currentColor;
+    transition: all 0.5s ease-in-out;
   }
+}
+
+.WizzyFooter {
+  text-align: center;
+  margin: 2rem;
 }

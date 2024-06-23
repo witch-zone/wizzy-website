@@ -1,7 +1,7 @@
 @use "../styles/colours" as colours;
 
 .WizzyWelcome {
-  min-height: 100vh;
+  min-height: 85vh;
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -37,4 +37,7 @@
   &__Yen {
     right: 0;
   }
+}
+
+.Mischief {
 }

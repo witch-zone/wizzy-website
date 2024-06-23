@@ -1,0 +1,45 @@
+@use "../../styles/colours" as colours;
+
+.Mischief {
+  &__Title {
+    margin: 2rem auto;
+  }
+
+  &__Header {
+    text-align: center;
+  }
+
+  &__Meta {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin: 2rem auto;
+  }
+
+  &__Body {
+    display: grid;
+    grid-template-columns: [main] 1fr [sidebar] 0.6fr;
+
+    > * {
+      grid-column: main;
+    }
+
+    > aside {
+      grid-column: sidebar;
+    }
+  }
+}
+
+.Date {
+  display: inline-block;
+  background: colours.$purple;
+  color: colours.$white;
+  border-radius: 1em;
+  padding: 0.25em 0.8em;
+
+  &__Prefix {
+    display: none;
+  }
+}
