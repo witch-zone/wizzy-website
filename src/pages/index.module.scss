@@ -1,18 +1,42 @@
 @use "../styles/colours" as colours;
 
+.Wizzy {
+  .WizzyWelcome {
+    min-height: 85vh;
+  }
+
+  @media screen and (min-width: 800px) {
+    padding-left: 40%;
+
+    .WizzyWelcome {
+      position: fixed;
+      height: 100%;
+      width: 40%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      min-height: unset;
+    }
+  }
+}
+
 .WizzyWelcome {
-  min-height: 85vh;
   position: relative;
+  padding: 2rem;
+
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+
   background: colours.$purple;
   color: colours.$white;
 
   &__Message {
     max-width: 20em;
     text-align: center;
+    position: relative;
+    z-index: 2;
   }
 
   &__Logo {
@@ -27,8 +51,10 @@
   position: absolute;
   height: auto;
   width: 15em;
-  max-width: 25vw;
+  width: 35%;
+  max-width: 9em;
   bottom: 0;
+  z-index: 1;
 
   &__Dani {
     left: 0;

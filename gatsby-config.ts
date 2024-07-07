@@ -3,6 +3,8 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `the Witch Zone`,
+    description:
+      "the witch zone is yen quach, dani valentine, and sometimes their friends. we want to make cute, silly, and inclusive things for everyone to enjoy!",
     siteUrl: `https://www.witch.zone`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.

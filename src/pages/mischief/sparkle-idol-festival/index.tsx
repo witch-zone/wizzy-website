@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { HeadFC } from "gatsby";
+import { type HeadFC, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 import WizzyLayout from "../../../components/WizzyLayout";
@@ -9,17 +9,19 @@ import "../../../styles/base.scss";
 import * as classes from "../Mischief.module.scss";
 import * as sifClasses from "./SparkleIdolFestival.module.scss";
 
-export default () => (
+export default ({ pageContext: { title, description, day, month, year } }) => (
   <WizzyLayout>
     <article className={classes.Mischief}>
       <header className={classes.Mischief__Header}>
         <h2 className={classes.Mischief__Title}>
           <StaticImage
             src="./logo.png"
-            alt="Sparkle Idol Festival"
+            alt={title}
             className={sifClasses.SparkleIdolFestival__Logo}
             loading="eager"
             placeholder="none"
+            width={1265}
+            height={497}
           />
         </h2>
 
@@ -29,7 +31,7 @@ export default () => (
             <div className={classes.Date__Chip}>Valentine's Day, 2017</div>
           </div>
 
-          <a href="https://sif.witch.zone">https://sif.witch.zone</a>
+          <Link to="https://sif.witch.zone">https://sif.witch.zone</Link>
         </div>
       </header>
 
@@ -124,6 +126,6 @@ export default () => (
   </WizzyLayout>
 );
 
-export const Head: HeadFC = () => (
-  <title>the Sparkle Idol Festival ~ a mischief from the Witch💖Zone</title>
+export const Head: HeadFC = ({ pageContext: { title } }) => (
+  <title>the {title} ~ a mischief from the Witch💖Zone</title>
 );
